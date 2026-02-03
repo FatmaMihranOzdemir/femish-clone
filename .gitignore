@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# büyük arşivler (GitHub 100 MB limit)
+Femish_kod.zip
+*.zip
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
