@@ -39,6 +39,7 @@ Site sayesinde okurlar dergiyi indirmeden, doğrudan tarayıcı üzerinden sayfa
 | [Vercel](https://vercel.com) | Yayınlama (her `main` push'unda otomatik deploy) |
 | Git & GitHub | Sürüm kontrolü |
 | VS Code | Geliştirme ortamı (IDE) |
+| v0 (Vercel), Google Gemini | Yapay zeka destekli geliştirme |
 
 ## Kurulum
 
@@ -86,14 +87,21 @@ femish-clone/
 
 ## Yapay Zeka Kullanımı
 
-Bu projeyi geliştirirken **[YAPAY ZEKA ARACI — ör. Cursor / ChatGPT / Claude]** yapay zeka asistanından şu aşamalarda yardım aldım:
+Bu projeyi geliştirirken iki yapay zeka aracından yardım aldım:
 
-1. **Planlama:** Sitenin bölümlerini (ana sayfa, sayılar, hakkımızda, iletişim) ve derginin site içinde nasıl gösterileceğini yapay zeka ile birlikte planladım.
-2. **Bileşen üretimi:** Tam ekran dergi okuyucusunu, mobil hamburger menüyü ve iletişim bölümünü istemler yazarak oluşturdum. Üretilen kodu kendi tasarımıma göre düzenledim.
-3. **Hata ayıklama:** Dergide aşağı kaydırınca son sayfanın altında boşluk kalması ve okuyucu açıkken arka planın kayması gibi sorunları yapay zekaya açıklayarak çözdüm.
-4. **Performans:** 37 sayfalık derginin hızlı açılması için sadece kapak ve ilk sayfanın önceden yüklenmesi fikrini yapay zeka ile değerlendirdim.
-5. **Mobil uyum, SEO ve erişilebilirlik:** Farklı ekran boyutları için Tailwind sınıfları, Open Graph etiketleri ve `aria-label` açıklamaları konusunda öneriler aldım.
-6. **Yayınlama ve dokümantasyon:** Vercel'e deploy adımlarını, alan adı (femishculture.com) bağlamayı ve bu README'nin taslağını yapay zeka desteğiyle hazırladım.
+- **[v0](https://v0.dev) (Vercel):** Next.js, React ve Tailwind CSS ile arayüz bileşenleri üreten yapay zeka aracı
+- **[Google Gemini](https://gemini.google.com):** Kod açıklama, hata ayıklama ve öneri almak için kullandığım yapay zeka asistanı
+
+Siteyi yayına almak için de **[Vercel](https://vercel.com)** platformunu kullandım.
+
+### Hangi aşamada nasıl kullandım?
+
+1. **Planlama (Gemini):** Sitenin bölümlerini (ana sayfa, sayılarımız, hakkımızda, iletişim) ve derginin site içinde nasıl gösterileceğini Gemini ile birlikte planladım.
+2. **Arayüz tasarımı ve bileşen üretimi (v0):** Siyah-beyaz, sade ve büyük yazılı ana sayfa tasarımını, üst menüyü ve mobil hamburger menüyü v0'a istem yazarak oluşturdum. v0'ın ürettiği Next.js + Tailwind kodunu projeme alıp kendi tasarımıma göre düzenledim.
+3. **Dergi okuyucu (v0 + Gemini):** Derginin 37 sayfasının tam ekran okunabildiği, yakınlaştırılabilen ve `ESC` ile kapanan okuyucuyu geliştirirken iki araçtan da yardım aldım.
+4. **Hata ayıklama (Gemini):** Dergide aşağı kaydırınca son sayfanın altında boşluk kalması ve okuyucu açıkken arka planın kayması gibi sorunları Gemini'ye anlatarak çözdüm. Kodun ne yaptığını anlamadığım yerlerde açıklama istedim.
+5. **Mobil uyum, performans ve SEO (Gemini):** Farklı ekran boyutları için Tailwind sınıfları, derginin hızlı açılması için sayfaların önceden yüklenmesi ve arama motorları için sayfa açıklamaları konusunda öneriler aldım.
+6. **Yayınlama (Vercel):** Projeyi GitHub deposuna bağlayarak Vercel'de yayına aldım ve femishculture.com alan adını bağladım. Artık `main` dalına her gönderimde site otomatik olarak güncelleniyor.
 
 Yapay zekanın ürettiği her kodu tarayıcıda test ederek doğruladım; çalışmayan ya da tasarıma uymayan kısımları yeniden istem yazarak veya elle düzelterek geliştirdim.
 
